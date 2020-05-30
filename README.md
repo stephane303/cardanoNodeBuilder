@@ -1,6 +1,6 @@
 # README #
 
-docker build environment to build cardano-node latest version/tag as in [https://github.com/input-output-hk/cardano-tutorials/blob/master/node-setup/build.md](https://github.com/input-output-hk/cardano-tutorials/blob/master/node-setup/build.md
+docker build environment to build cardano-node latest version/tag as in [node-setup/build.md](https://github.com/input-output-hk/cardano-tutorials/blob/master/node-setup/build.md)
 
 ## steps ##
 
