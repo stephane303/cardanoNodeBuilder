@@ -1,0 +1,23 @@
+version: "3.8"
+
+#
+# to compile cardano-node and cardano-cli run the following commands:
+#
+# docker-compose up --build -d
+# docker container cp build_bins_1:/usr/local/bin cardano-bins/
+#
+# then scp the resulting binaries to your node and relays
+#
+
+services:
+  build:
+    image: cardano-builder:1.12.0
+    build:
+      context: .
+      target: cardano-builder
+
+  bins:
+    image: cardano-bins:1.12.0
+    build:
+      context: .
+      target: cardano-bins
