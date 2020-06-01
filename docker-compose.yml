@@ -6,9 +6,3 @@ services:
     build:
       context: .
       target: cardano-builder
-
-  bins:
-    image: cardano-bins:1.12.0
-    build:
-      context: .
-      target: cardano-bins

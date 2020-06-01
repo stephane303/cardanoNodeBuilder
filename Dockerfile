@@ -42,9 +42,3 @@ RUN cp -f \
     ./cardano-node-${CARDANO_NODE_VERSION}/x/cardano-node/build/cardano-node/cardano-node \
     ./cardano-cli-${CARDANO_NODE_VERSION}/x/cardano-cli/build/cardano-cli/cardano-cli \
     /usr/local/bin/
-
-### IMAGE TO COPY THE BINS ###
-FROM ubuntu:20.04 AS cardano-bins
-
-# Copy the compiled cardano node software from the builder to the node
-COPY --from=cardano-builder /usr/local/bin/cardano-node /usr/local/bin/cardano-cli /usr/local/bin/

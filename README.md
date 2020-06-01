@@ -1,12 +1,12 @@
 # README #
 
-At the minute, the only way to install the ```cardano-node``` and the ```cardano-cli``` software components necessary to run a stake pool on Shelley is to compile them. Compilation can be troublesome and lead to issues. To avoid any complications and always get solid results and the right binaries, I provide a Docker build environment to build against the latest version/tag as in [the official documentation to build a node](https://github.com/input-output-hk/cardano-tutorials/blob/master/node-setup/build.md).
+At the minute, the only way to install the ```cardano-node``` and the ```cardano-cli```, necessary to run a stake pool on Shelley, is to compile them. Compilation can be troublesome for some and lead to issues. To reduce complexity and have predictable results, I use a Docker build environment. This setup will always to build against the latest ```cardano-node``` version and ```pioneer-*``` tag as in [the official documentation](https://github.com/input-output-hk/cardano-tutorials/blob/master/node-setup/build.md).
 
 **IMPORTANT: you must run these steps to compile ```cardano-node``` and ```cardano-cli``` on your local computer, and copy them over to your servers. This is to avoid useless load and installing compilation software on your servers.**
 
 ## install docker ##
 
-Install and run Docker Desktop for your OS from [the official site](https://www.docker.com/products/docker-desktop).
+Install and run Docker Desktop for your OS from [the official site](https://www.docker.com/products/docker-desktop), on your local computer.
 
 ## clone the build repo ##
 
@@ -24,7 +24,7 @@ docker-compose up --build -d
 ## copy the binaries to your host ##
 
 ```bash
-docker container cp build_bins_1:/usr/local/bin cardano-bins/
+docker container cp build_builder_1:/usr/local/bin cardano-bins/
 ```
 
 ## scp the binaries to your nodes ##
