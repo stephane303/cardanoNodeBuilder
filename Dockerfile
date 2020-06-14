@@ -7,7 +7,7 @@ ENV CABAL_VERSION="3.2" \
     # the latest cardano node version should do it
     CARDANO_NODE_VERSION="1.13.0" \
     # the latest pioneer's tag should do it
-    CARDANO_NODE_GIT_TAG="1.13.0" \
+    CARDANO_NODE_GIT_TAG="1.13.0-rewards" \
     # this PATH is needed for the PPA ghc and cabal packages to work
     PATH="/opt/ghc/bin:/opt/cabal/bin:${PATH}"
 
